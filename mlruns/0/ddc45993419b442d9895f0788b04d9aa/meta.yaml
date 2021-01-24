@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/bxb35sc/mlflow-example/mlruns/0/ddc45993419b442d9895f0788b04d9aa/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: ddc45993419b442d9895f0788b04d9aa
+run_uuid: ddc45993419b442d9895f0788b04d9aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1611459773918
+status: 1
+tags: []
+user_id: bxb35sc
