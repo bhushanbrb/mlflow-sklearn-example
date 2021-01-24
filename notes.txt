@@ -1,0 +1,73 @@
+gcloud auth application-default login
+
+
+
+mlflow models serve -m runs:/<RUN_ID>/model
+mlflow models serve -m runs:/603fb61aad8d42b1bbdaf729ddaea41a/model
+mlflow models serve -m runs:/4fbc19855eb04afe88292e180794dc3d/model
+mlflow models serve -m runs:/277d62e68aa947c290f2288cbdcf5c47/model --port 5001
+source /usr/local/Caskroom/miniconda/base/bin/../etc/profile.d/conda.sh && conda activate mlflow-0f8a42c01ebdcdd9053d362d9a46b8aa0823e815 1>&2 && gunicorn --timeout=60 -b 127.0.0.1:8090 -w 1 ${GUNICORN_CMD_ARGS} -- mlflow.pyfunc.scoring_server.wsgi:app'
+
+mlflow run https://github.com/dbczumar/mlflow-keras-ffnn-mnist -P epochs=2
+
+mnist = keras.datasets.mnist
+(x_train, y_train),(x_test, y_test) = mnist.load_data(path='mnist.npz')
+x_train, x_test = x_train / 255.0, x_test / 255.0
+import os
+current_dir = os.getcwd()
+
+from tensorflow.keras.datasets import mnist
+(X_train, Y_train), (X_test, Y_test) = mnist.load_data(path=current_dir+'/mnist.npz')
+
+
+mlflow models serve -m runs:/eaaa28a2f8074cbe9d55e8e3e1802953/model --port 8090
+
+
+https://github.com/mlflow/mlflow-example.git
+[7,0.27,0.36,20.7,0.045,45,170,1.001,3,0.45,8.8]
+
+curl -X POST -H "Content-Type:application/json; format=pandas-split" --data
+'{"columns":["alcohol", "chlorides", "citric acid", "density", "fixed acidity", "free sulfur dioxide", "pH", "residual sugar", "sulphates", "total sulfur dioxide", "volatile acidity"],
+"data":[[12.8, 0.029, 0.48, 0.98, 6.2, 29, 3.33, 1.2, 0.39, 75, 0.66]]}'
+
+
+curl -X POST -H "Content-Type:application/json; format=pandas-split" --data \
+'{"columns":["alcohol", "chlorides", "citric acid", "density", "fixed acidity", "free sulfur dioxide", "pH", "residual sugar", "sulphates", "total sulfur dioxide", "volatile acidity"], \
+"data":[[7,0.27,0.36,20.7,0.045,45,170,1.001,3,0.45,8.8]]}' \
+http://127.0.0.1:5001/invocations
+
+
+
+fixed acidity	volatile acidity	citric acid	residual sugar	chlorides	free sulfur dioxide	total sulfur dioxide	density	pH	sulphates	alcohol	quality
+7	0.27	0.36	20.7	0.045	45	170	1.001	3	0.45	8.8	6
+
+
+
+
+cat > test.yaml << EOF
+Line 1
+Line 2
+Line 3
+EOF
+
+
+cat > test.yaml << EOF
+name: tutorial
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - scikit-learn
+  - pip
+  - pip:
+    - mlflow
+EOF
+
+
+
+
+
+
+
+
